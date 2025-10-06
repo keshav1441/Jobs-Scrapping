@@ -1,0 +1,28 @@
+# Configuration for Caleres Jobs Portal (Dayforce)
+site_name: "Caleres"
+start_url: "https://jobs.dayforcehcm.com/en-US/caleres/calerescorporate"
+
+# Note: This is a dynamic JavaScript application
+# The page loads jobs via AJAX/API calls
+# For production use, consider using Selenium or API endpoints
+
+# Selectors to find the data on the page (may need adjustment)
+selectors:
+  job_container: "div[class*='job'], div[class*='position'], div[class*='listing'], .search-result, article"
+  title: "h1, h2, h3, h4, .title, .job-title, .position-title::text"
+  company: ".company, .employer, .organization::text"
+  location: ".location, .city, .address::text"
+  date_posted: ".date, .posted, time::attr(datetime)"
+  apply_url: "a[href*='apply'], a[href*='job'], .apply-button::attr(href)"
+  description: ".description, .summary, .details::text"
+
+# How to handle moving to the next page
+pagination:
+  next_page_selector: "a[aria-label='Next'], .pagination-next, .next-page::attr(href)"
+
+# Additional configuration
+scraping_options:
+  use_scraperapi: true
+  delay_between_requests: 3
+  max_pages: 5
+  wait_for_dynamic_content: true
