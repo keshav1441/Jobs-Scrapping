@@ -1,238 +1,156 @@
-2025-10-07 15:24:55,837 - INFO - Database initialized successfully
-2025-10-07 15:24:55,937 - INFO - Connected to MongoDB successfully
-2025-10-07 15:24:56,132 - INFO - Database indexes created successfully
-2025-10-07 15:27:40,748 - INFO - Database initialized successfully
-2025-10-07 15:27:40,793 - INFO - Connected to MongoDB successfully
-2025-10-07 15:27:40,805 - INFO - Database indexes created successfully
-2025-10-07 15:27:59,729 - INFO - Starting scraping task scrape_20251007_095759
-2025-10-07 15:27:59,736 - INFO - Loaded config: Example Job Site
-2025-10-07 15:27:59,737 - INFO - Starting to scrape Example Job Site from https://example.com/jobs
-2025-10-07 15:27:59,737 - INFO - Scraping page 1: https://example.com/jobs
-2025-10-07 15:28:23,201 - ERROR - Error fetching https://example.com/jobs: 404 Client Error: Not Found for url: https://api.scraperapi.com/?api_key=a6d4e94d7a28b565f7c83839f54926a5&url=https%3A%2F%2Fexample.com%2Fjobs&render=true&country_code=us&wait=5000&session_number=1
-2025-10-07 15:28:23,203 - INFO - Completed scraping Example Job Site. Total jobs: 0
-2025-10-07 15:28:23,204 - INFO - Scraping task scrape_20251007_095759 completed. Stored 0 jobs
-2025-10-07 15:32:19,672 - INFO - Starting scraping task scrape_20251007_100219
-2025-10-07 15:32:19,679 - INFO - Loaded config: 3M Workday
-2025-10-07 15:32:19,680 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 15:32:19,680 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 15:32:37,992 - INFO - Found 0 job containers
-2025-10-07 15:32:37,993 - INFO - Found 0 jobs on page 1
-2025-10-07 15:32:37,994 - ERROR - Error getting next page URL: Pseudo-element found at position 28
-2025-10-07 15:32:40,996 - INFO - Completed scraping 3M Workday. Total jobs: 0
-2025-10-07 15:32:40,996 - INFO - Scraping task scrape_20251007_100219 completed. Stored 0 jobs
-2025-10-07 15:33:38,347 - INFO - Database initialized successfully
-2025-10-07 15:33:38,355 - INFO - Loaded config: 3M Workday
-2025-10-07 15:33:38,355 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 15:33:38,355 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 15:34:08,559 - INFO - Found 0 job containers
-2025-10-07 15:34:08,561 - INFO - Found 0 jobs on page 1
-2025-10-07 15:34:08,562 - ERROR - Error getting next page URL: Pseudo-element found at position 28
-2025-10-07 15:34:11,563 - INFO - Completed scraping 3M Workday. Total jobs: 0
-2025-10-07 15:35:18,327 - INFO - Starting scraping task scrape_20251007_100518
-2025-10-07 15:35:18,331 - INFO - Loaded config: Indeed Test
-2025-10-07 15:35:18,332 - INFO - Starting to scrape Indeed Test from https://www.indeed.com/jobs?q=software+engineer&l=remote
-2025-10-07 15:35:18,332 - INFO - Scraping page 1: https://www.indeed.com/jobs?q=software+engineer&l=remote
-2025-10-07 15:35:56,146 - INFO - Database initialized successfully
-2025-10-07 15:35:56,150 - INFO - Loaded config: Indeed Test
-2025-10-07 15:35:56,150 - INFO - Starting to scrape Indeed Test from https://www.indeed.com/jobs?q=software+engineer&l=remote
-2025-10-07 15:35:56,150 - INFO - Scraping page 1: https://www.indeed.com/jobs?q=software+engineer&l=remote
-2025-10-07 15:36:01,426 - INFO - Found 16 job containers
-2025-10-07 15:36:01,519 - INFO - Found 16 jobs on page 1
-2025-10-07 15:36:01,640 - ERROR - Error getting next page URL: Pseudo-element found at position 25
-2025-10-07 15:36:04,641 - INFO - Completed scraping Indeed Test. Total jobs: 16
-2025-10-07 15:36:04,687 - INFO - Scraping task scrape_20251007_100518 completed. Stored 16 jobs
-2025-10-07 15:36:53,250 - ERROR - Error fetching https://www.indeed.com/jobs?q=software+engineer&l=remote: 500 Server Error: Internal Server Error for url: https://api.scraperapi.com/?api_key=a6d4e94d7a28b565f7c83839f54926a5&url=https%3A%2F%2Fwww.indeed.com%2Fjobs%3Fq%3Dsoftware%2Bengineer%26l%3Dremote&render=true&country_code=us&wait=5000&session_number=1
-2025-10-07 15:36:53,253 - INFO - Completed scraping Indeed Test. Total jobs: 0
-2025-10-07 15:37:01,627 - INFO - Database initialized successfully
-2025-10-07 15:37:01,633 - INFO - Loaded config: Indeed Test
-2025-10-07 15:37:01,633 - INFO - Starting to scrape Indeed Test from https://www.indeed.com/jobs?q=software+engineer&l=remote
-2025-10-07 15:37:01,633 - INFO - Scraping page 1: https://www.indeed.com/jobs?q=software+engineer&l=remote
-2025-10-07 15:37:29,756 - INFO - Found 16 job containers
-2025-10-07 15:37:29,842 - INFO - Found 16 jobs on page 1
-2025-10-07 15:37:29,914 - ERROR - Error getting next page URL: Pseudo-element found at position 25
-2025-10-07 15:37:32,915 - INFO - Completed scraping Indeed Test. Total jobs: 16
-2025-10-07 15:37:39,872 - INFO - Starting scraping task scrape_20251007_100739
-2025-10-07 15:37:39,876 - INFO - Loaded config: Indeed Test
-2025-10-07 15:37:39,877 - INFO - Starting to scrape Indeed Test from https://www.indeed.com/jobs?q=software+engineer&l=remote
-2025-10-07 15:37:39,877 - INFO - Scraping page 1: https://www.indeed.com/jobs?q=software+engineer&l=remote
-2025-10-07 15:38:37,075 - ERROR - Error fetching https://www.indeed.com/jobs?q=software+engineer&l=remote: 500 Server Error: Internal Server Error for url: https://api.scraperapi.com/?api_key=a6d4e94d7a28b565f7c83839f54926a5&url=https%3A%2F%2Fwww.indeed.com%2Fjobs%3Fq%3Dsoftware%2Bengineer%26l%3Dremote&render=true&country_code=us&wait=5000&session_number=1
-2025-10-07 15:38:37,077 - INFO - Completed scraping Indeed Test. Total jobs: 0
-2025-10-07 15:38:37,078 - INFO - Scraping task scrape_20251007_100739 completed. Stored 0 jobs
-2025-10-07 15:44:15,465 - INFO - Database initialized successfully
-2025-10-07 15:44:15,470 - INFO - Loaded config: Carlisle Companies
-2025-10-07 15:44:15,471 - INFO - Starting to scrape Carlisle Companies from https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:44:15,471 - INFO - Scraping page 1: https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:44:35,373 - INFO - Found 0 job containers
-2025-10-07 15:44:35,374 - INFO - Found 0 jobs on page 1
-2025-10-07 15:44:35,377 - ERROR - Error getting next page URL: Pseudo-element found at position 10
-2025-10-07 15:44:38,378 - INFO - Completed scraping Carlisle Companies. Total jobs: 0
-2025-10-07 15:47:20,107 - INFO - Starting scraping task scrape_20251007_101720
-2025-10-07 15:47:20,120 - INFO - Loaded config: Carlisle Companies
-2025-10-07 15:47:20,121 - INFO - Starting to scrape Carlisle Companies from https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:47:20,121 - INFO - Scraping page 1: https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:47:53,588 - ERROR - Error getting jobs: 1 validation error for JobResponse
-data
-  Field required [type=missing, input_value={'url': '', 'title': 'Pri...e4e60c7cf10d76f8842658'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.5/v/missing
-2025-10-07 15:47:56,413 - INFO - Found 0 job containers
-2025-10-07 15:47:56,414 - INFO - Found 0 jobs on page 1
-2025-10-07 15:47:56,418 - ERROR - Error getting next page URL: Pseudo-element found at position 10
-2025-10-07 15:47:58,023 - INFO - Starting scraping task scrape_20251007_101758
-2025-10-07 15:47:58,028 - INFO - Loaded config: Simple Test
-2025-10-07 15:47:58,029 - INFO - Starting to scrape Simple Test from https://jobs.github.com/
-2025-10-07 15:47:58,029 - INFO - Scraping page 1: https://jobs.github.com/
-2025-10-07 15:47:59,419 - INFO - Completed scraping Carlisle Companies. Total jobs: 0
-2025-10-07 15:47:59,419 - INFO - Scraping task scrape_20251007_101720 completed. Stored 0 jobs
-2025-10-07 15:48:42,249 - ERROR - Error getting jobs: 1 validation error for JobResponse
-data
-  Field required [type=missing, input_value={'url': '', 'title': 'Pri...e4e60c7cf10d76f8842658'}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.5/v/missing
-2025-10-07 15:48:54,586 - ERROR - Error fetching https://jobs.github.com/: 500 Server Error: Internal Server Error for url: https://api.scraperapi.com/?api_key=a6d4e94d7a28b565f7c83839f54926a5&url=https%3A%2F%2Fjobs.github.com%2F&render=true&country_code=us&wait=5000&session_number=1
-2025-10-07 15:48:54,588 - INFO - Completed scraping Simple Test. Total jobs: 0
-2025-10-07 15:48:54,589 - INFO - Scraping task scrape_20251007_101758 completed. Stored 0 jobs
-2025-10-07 15:50:14,215 - INFO - Database initialized successfully
-2025-10-07 15:50:14,219 - INFO - Loaded config: Carlisle Companies
-2025-10-07 15:50:14,219 - INFO - Starting to scrape Carlisle Companies from https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:50:14,220 - INFO - Scraping page 1: https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:50:33,610 - INFO - Found 0 job containers
-2025-10-07 15:50:33,611 - INFO - Found 0 jobs on page 1
-2025-10-07 15:50:33,613 - ERROR - Error getting next page URL: Pseudo-element found at position 10
-2025-10-07 15:50:36,614 - INFO - Completed scraping Carlisle Companies. Total jobs: 0
-2025-10-07 15:50:48,729 - INFO - Database initialized successfully
-2025-10-07 15:50:48,733 - INFO - Loaded config: Carlisle Companies
-2025-10-07 15:50:48,733 - INFO - Starting to scrape Carlisle Companies from https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:50:48,734 - INFO - Scraping page 1: https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:51:07,788 - INFO - Found 0 job containers
-2025-10-07 15:51:07,789 - INFO - Found 0 jobs on page 1
-2025-10-07 15:51:07,792 - ERROR - Error getting next page URL: Pseudo-element found at position 10
-2025-10-07 15:51:10,793 - INFO - Completed scraping Carlisle Companies. Total jobs: 0
-2025-10-07 15:51:19,555 - INFO - Database initialized successfully
-2025-10-07 15:51:19,564 - INFO - Loaded config: Simple Test
-2025-10-07 15:51:19,565 - INFO - Starting to scrape Simple Test from https://jobs.github.com/
-2025-10-07 15:51:19,565 - INFO - Scraping page 1: https://jobs.github.com/
-2025-10-07 15:52:16,526 - ERROR - Error fetching https://jobs.github.com/: 500 Server Error: Internal Server Error for url: https://api.scraperapi.com/?api_key=a6d4e94d7a28b565f7c83839f54926a5&url=https%3A%2F%2Fjobs.github.com%2F&render=true&country_code=us&wait=5000&session_number=1
-2025-10-07 15:52:16,528 - INFO - Completed scraping Simple Test. Total jobs: 0
-2025-10-07 15:52:17,047 - INFO - Starting scraping task scrape_20251007_102217
-2025-10-07 15:52:17,053 - INFO - Loaded config: Carlisle Companies
-2025-10-07 15:52:17,053 - INFO - Starting to scrape Carlisle Companies from https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:52:17,055 - INFO - Scraping page 1: https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:52:36,509 - INFO - Found 0 job containers
-2025-10-07 15:52:36,509 - INFO - Found 0 jobs on page 1
-2025-10-07 15:52:36,511 - ERROR - Error getting next page URL: Pseudo-element found at position 10
-2025-10-07 15:52:39,512 - INFO - Completed scraping Carlisle Companies. Total jobs: 0
-2025-10-07 15:52:39,513 - INFO - Scraping task scrape_20251007_102217 completed. Stored 0 jobs
-2025-10-07 15:52:56,736 - INFO - Database initialized successfully
-2025-10-07 15:52:56,740 - INFO - Loaded config: Carlisle Companies
-2025-10-07 15:52:56,740 - INFO - Starting to scrape Carlisle Companies from https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:52:56,741 - INFO - Scraping page 1: https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 15:53:24,659 - INFO - Found 0 job containers
-2025-10-07 15:53:24,659 - INFO - Found 0 jobs on page 1
-2025-10-07 15:53:24,662 - ERROR - Error getting next page URL: Pseudo-element found at position 10
-2025-10-07 15:53:27,664 - INFO - Completed scraping Carlisle Companies. Total jobs: 0
-2025-10-07 15:54:26,727 - INFO - Database initialized successfully
-2025-10-07 15:54:26,743 - INFO - Loaded config: 3M Workday
-2025-10-07 15:54:26,744 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 15:54:26,744 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 15:55:02,235 - INFO - Found 0 job containers
-2025-10-07 15:55:02,239 - INFO - Found 0 jobs on page 1
-2025-10-07 15:55:02,245 - ERROR - Error getting next page URL: Pseudo-element found at position 28
-2025-10-07 15:55:05,248 - INFO - Completed scraping 3M Workday. Total jobs: 0
-2025-10-07 15:55:31,109 - INFO - Database initialized successfully
-2025-10-07 15:55:31,117 - INFO - Loaded config: Working Test
-2025-10-07 15:55:31,117 - INFO - Starting to scrape Working Test from https://jobs.github.com/
-2025-10-07 15:55:31,118 - INFO - Scraping page 1: https://jobs.github.com/
-2025-10-07 16:18:23,626 - INFO - Database initialized successfully
-2025-10-07 16:18:23,641 - INFO - Loaded config: 3M Workday
-2025-10-07 16:18:23,641 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:18:23,642 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:18:51,574 - INFO - Found 64 job containers
-2025-10-07 16:18:51,673 - INFO - Found 60 jobs on page 1
-2025-10-07 16:18:51,744 - ERROR - Error getting next page URL: Pseudo-element found at position 28
-2025-10-07 16:18:54,745 - INFO - Completed scraping 3M Workday. Total jobs: 60
-2025-10-07 16:19:06,785 - INFO - Database initialized successfully
-2025-10-07 16:19:06,794 - INFO - Loaded config: Carlisle Companies
-2025-10-07 16:19:06,795 - INFO - Starting to scrape Carlisle Companies from https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 16:19:06,795 - INFO - Scraping page 1: https://myjobs.adp.com/carlislecompanies/cx/job-listing
-2025-10-07 16:19:51,518 - INFO - Found 0 job containers
-2025-10-07 16:19:51,518 - INFO - Found 0 jobs on page 1
-2025-10-07 16:19:51,570 - ERROR - Error getting next page URL: Pseudo-element found at position 10
-2025-10-07 16:19:54,572 - INFO - Completed scraping Carlisle Companies. Total jobs: 0
-2025-10-07 16:21:30,524 - INFO - Database initialized successfully
-2025-10-07 16:21:30,539 - INFO - Loaded config: 3M Workday
-2025-10-07 16:21:30,540 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:21:30,541 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:21:58,865 - INFO - Found 0 job containers
-2025-10-07 16:21:58,866 - INFO - Found 0 jobs on page 1
-2025-10-07 16:21:58,870 - ERROR - Error getting next page URL: Pseudo-element found at position 28
-2025-10-07 16:22:01,871 - INFO - Completed scraping 3M Workday. Total jobs: 0
-2025-10-07 16:22:28,328 - INFO - Database initialized successfully
-2025-10-07 16:22:28,346 - INFO - Loaded config: 3M Workday
-2025-10-07 16:22:28,347 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:22:28,347 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:22:47,254 - INFO - Found 64 job containers
-2025-10-07 16:22:47,364 - INFO - Found 60 jobs on page 1
-2025-10-07 16:22:47,366 - INFO - Scraping job details 1/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:23:07,382 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:23:09,383 - INFO - Scraping job details 2/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:23:37,996 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:23:39,999 - INFO - Scraping job details 3/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:24:02,367 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:24:04,368 - INFO - Scraping job details 4/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
-2025-10-07 16:24:31,477 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:24:33,478 - INFO - Scraping job details 5/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
-2025-10-07 16:25:01,481 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:25:03,482 - INFO - Scraping job details 6/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
-2025-10-07 16:25:26,353 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:25:28,355 - INFO - Scraping job details 7/60: Shift Supervisor (m/v/*)
-2025-10-07 16:25:54,281 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:25:56,282 - INFO - Scraping job details 8/60: Shift Supervisor (m/v/*)
-2025-10-07 16:26:20,847 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:26:22,848 - INFO - Scraping job details 9/60: Shift Supervisor (m/v/*)
-2025-10-07 16:26:52,069 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:26:54,070 - INFO - Scraping job details 10/60: Product Content Senior Analyst - Sumaré/SP
-2025-10-07 16:27:18,645 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:27:20,646 - INFO - Scraping job details 11/60: Product Content Senior Analyst - Sumaré/SP
-2025-10-07 16:27:49,324 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:27:51,327 - INFO - Scraping job details 12/60: Product Content Senior Analyst - Sumaré/SP
-2025-10-07 16:28:12,684 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:28:14,686 - INFO - Scraping job details 13/60: Strategy and Business Development Manager
-2025-10-07 16:28:49,768 - INFO - Database initialized successfully
-2025-10-07 16:28:49,783 - INFO - Loaded config: 3M Workday
-2025-10-07 16:28:49,784 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:28:49,784 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:29:29,100 - INFO - Found 64 job containers
-2025-10-07 16:29:29,209 - INFO - Found 60 jobs on page 1
-2025-10-07 16:29:29,210 - INFO - Scraping job details 1/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:29:52,632 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:29:54,634 - INFO - Scraping job details 2/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:30:32,998 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:30:35,000 - INFO - Scraping job details 3/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:31:09,128 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:31:11,130 - INFO - Scraping job details 4/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
-2025-10-07 16:31:32,334 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:31:34,335 - INFO - Scraping job details 5/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
-2025-10-07 16:31:58,889 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:32:00,890 - INFO - Scraping job details 6/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
-2025-10-07 16:32:27,244 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:34:03,479 - INFO - Database initialized successfully
-2025-10-07 16:34:03,496 - INFO - Loaded config: 3M Workday
-2025-10-07 16:34:03,497 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:34:03,497 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:35:07,789 - INFO - Database initialized successfully
-2025-10-07 16:35:07,804 - INFO - Loaded config: 3M Workday
-2025-10-07 16:35:07,804 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:35:07,804 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
-2025-10-07 16:35:47,660 - INFO - Found 64 job containers
-2025-10-07 16:35:47,766 - INFO - Found 60 jobs on page 1
-2025-10-07 16:35:47,767 - INFO - Scraping job details 1/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:36:15,588 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:36:17,590 - INFO - Scraping job details 2/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:37:17,227 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:37:19,229 - INFO - Scraping job details 3/60: Industrial Adhesives & Tapes Specialist, Northern California
-2025-10-07 16:37:50,872 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:37:52,873 - INFO - Scraping job details 4/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
-2025-10-07 16:38:13,436 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
-2025-10-07 16:38:15,437 - INFO - Scraping job details 5/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
-2025-10-07 16:55:09,514 - INFO - Database initialized successfully
-2025-10-07 16:56:10,371 - INFO - Database initialized successfully
-2025-10-07 16:56:15,769 - INFO - Database initialized successfully
+2025-10-07 18:07:05,468 - INFO - Database initialized successfully
+2025-10-07 18:07:05,477 - INFO - Loaded config: 3M Workday
+2025-10-07 18:07:05,477 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:07:05,477 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:07:41,286 - INFO - Found 112 job containers
+2025-10-07 18:07:41,409 - INFO - Found 20 jobs on page 1
+2025-10-07 18:07:41,409 - INFO - Added 20 unique jobs from page 1
+2025-10-07 18:07:41,410 - INFO - Scraping job details 1/20: Global Energy Strategy & Business Operations Leader (m/f/*)
+2025-10-07 18:08:08,577 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
+2025-10-07 18:08:10,579 - INFO - Scraping job details 2/20: Industrial Adhesives & Tapes Specialist, Northern California
+2025-10-07 18:08:40,779 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
+2025-10-07 18:08:42,780 - INFO - Scraping job details 3/20: Spezialist Produktionssysteme / Fertigung (m/w/*)
+2025-10-07 18:09:15,431 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
+2025-10-07 18:09:17,432 - INFO - Scraping job details 4/20: Shift Supervisor (m/v/*)
+2025-10-07 18:09:39,943 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
+2025-10-07 18:09:41,944 - INFO - Scraping job details 5/20: Product Content Senior Analyst - Sumaré/SP
+2025-10-07 18:10:19,971 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
+2025-10-07 18:10:21,972 - INFO - Scraping job details 6/20: Strategy and Business Development Manager
+2025-10-07 18:10:48,293 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
+2025-10-07 18:10:50,295 - INFO - Scraping job details 7/20: Vertriebsmitarbeiter Außendienst (m/w/*) im Gebiet Mitte Deutschland
+2025-10-07 18:11:22,163 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
+2025-10-07 18:11:24,164 - INFO - Scraping job details 8/20: Business Development Manager – Militärmarkt (m/w/*)
+2025-10-07 18:12:15,050 - INFO - Database initialized successfully
+2025-10-07 18:12:15,058 - INFO - Loaded config: 3M Workday
+2025-10-07 18:12:15,058 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:12:15,059 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:12:45,779 - INFO - Found 0 job containers
+2025-10-07 18:12:45,781 - INFO - Found 0 jobs on page 1
+2025-10-07 18:12:45,781 - INFO - Added 0 unique jobs from page 1
+2025-10-07 18:12:45,783 - ERROR - Error getting next page URL: Pseudo-element found at position 28
+2025-10-07 18:12:48,784 - INFO - Completed scraping 3M Workday. Total jobs: 0
+2025-10-07 18:13:51,435 - INFO - Database initialized successfully
+2025-10-07 18:13:51,442 - INFO - Loaded config: 3M Workday
+2025-10-07 18:13:51,443 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:13:51,443 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:14:07,537 - INFO - Found 0 job containers
+2025-10-07 18:14:07,537 - INFO - Found 0 jobs on page 1
+2025-10-07 18:14:07,537 - INFO - Added 0 unique jobs from page 1
+2025-10-07 18:14:07,539 - ERROR - Error getting next page URL: Pseudo-element found at position 28
+2025-10-07 18:14:10,539 - INFO - Completed scraping 3M Workday. Total jobs: 0
+2025-10-07 18:22:15,629 - INFO - Database initialized successfully
+2025-10-07 18:22:15,645 - INFO - Loaded config: 3M Workday
+2025-10-07 18:22:15,646 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:22:15,646 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:22:33,499 - INFO - Found 0 job containers
+2025-10-07 18:22:33,499 - INFO - Found 0 jobs on page 1
+2025-10-07 18:22:33,500 - INFO - Added 0 unique jobs from page 1
+2025-10-07 18:22:33,503 - ERROR - Error getting next page URL: Pseudo-element found at position 28
+2025-10-07 18:22:36,505 - INFO - Completed scraping 3M Workday. Total jobs: 0
+2025-10-07 18:23:31,746 - INFO - Database initialized successfully
+2025-10-07 18:23:31,766 - INFO - Loaded config: 3M Workday
+2025-10-07 18:23:31,767 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:23:31,767 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:23:55,642 - INFO - Found 112 job containers
+2025-10-07 18:23:55,937 - INFO - Found 20 jobs on page 1
+2025-10-07 18:23:55,937 - INFO - Added 20 unique jobs from page 1
+2025-10-07 18:23:55,938 - INFO - Scraping job details 1/20: Global Energy Strategy & Business Operations Leader (m/f/*)
+2025-10-07 18:24:23,780 - INFO - Scraping job details 2/20: Industrial Adhesives & Tapes Specialist, Northern California
+2025-10-07 18:24:54,969 - INFO - Scraping job details 3/20: Spezialist Produktionssysteme / Fertigung (m/w/*)
+2025-10-07 18:25:23,707 - INFO - Scraping job details 4/20: Shift Supervisor (m/v/*)
+2025-10-07 18:25:49,333 - INFO - Scraping job details 5/20: Product Content Senior Analyst - Sumaré/SP
+2025-10-07 18:26:14,080 - INFO - Scraping job details 6/20: Strategy and Business Development Manager
+2025-10-07 18:26:53,502 - INFO - Scraping job details 7/20: Vertriebsmitarbeiter Außendienst (m/w/*) im Gebiet Mitte Deutschland
+2025-10-07 18:27:26,381 - INFO - Scraping job details 8/20: Business Development Manager – Militärmarkt (m/w/*)
+2025-10-07 18:27:51,747 - INFO - Scraping job details 9/20: Engineering Systems IT Architect
+2025-10-07 18:28:23,635 - INFO - Scraping job details 10/20: Automotive Application Engineer - Battery Bonding
+2025-10-07 18:28:53,840 - INFO - Scraping job details 11/20: Global Labor Relations Director
+2025-10-07 18:29:34,077 - INFO - Scraping job details 12/20: Environmental Engineer* (Cordova, IL)
+2025-10-07 18:30:05,439 - INFO - Scraping job details 13/20: Sr. Manager, Site Operations
+2025-10-07 18:30:35,183 - INFO - Scraping job details 14/20: Vertriebsmitarbeiter Außendienst (m/w/*) im Gebiet Hessen / Nord-Bayern
+2025-10-07 18:31:04,818 - INFO - Scraping job details 15/20: Process Development Engineer
+2025-10-07 18:31:36,879 - INFO - Scraping job details 16/20: Digital Marketing Content Specialist - Sumaré/SP (Região de Campinas)
+2025-10-07 18:32:16,655 - INFO - Scraping job details 17/20: Gerente de Cuentas Claves - Division Proteccion Personal
+2025-10-07 18:32:59,823 - INFO - Scraping job details 18/20: Product Development Specialist - Aerospace*
+2025-10-07 18:33:35,767 - INFO - Scraping job details 19/20: VAT and IEPS Certification Specialist, San Luis Potosí
+2025-10-07 18:33:58,224 - INFO - Scraping job details 20/20: Senior Key Account Manager, Consumer Business Group(General Trade/ Office Supplies)
+2025-10-07 18:34:31,183 - ERROR - Error getting next page URL: Pseudo-element found at position 28
+2025-10-07 18:34:31,183 - INFO - Completed scraping 3M Workday. Total jobs: 20
+2025-10-07 18:35:57,539 - INFO - Database initialized successfully
+2025-10-07 18:35:57,566 - INFO - Loaded config: 3M Workday
+2025-10-07 18:35:57,566 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:35:57,567 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:36:31,257 - INFO - Found 0 job containers
+2025-10-07 18:36:31,258 - INFO - Found 0 jobs on page 1
+2025-10-07 18:36:31,258 - INFO - Added 0 unique jobs from page 1
+2025-10-07 18:36:31,261 - ERROR - Error getting next page URL: Pseudo-element found at position 28
+2025-10-07 18:36:31,261 - INFO - Completed scraping 3M Workday. Total jobs: 0
+2025-10-07 18:39:19,305 - INFO - Database initialized successfully
+2025-10-07 18:39:19,320 - INFO - Loaded config: 3M Workday
+2025-10-07 18:39:19,320 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:39:19,320 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:39:44,439 - INFO - Found 0 job containers
+2025-10-07 18:39:44,439 - INFO - Found 0 jobs on page 1
+2025-10-07 18:39:44,439 - INFO - Added 0 unique jobs from page 1
+2025-10-07 18:39:44,443 - ERROR - Error getting next page URL: Pseudo-element found at position 28
+2025-10-07 18:39:44,444 - INFO - Completed scraping 3M Workday. Total jobs: 0
+2025-10-07 18:40:11,482 - INFO - Database initialized successfully
+2025-10-07 18:40:11,498 - INFO - Loaded config: 3M Workday
+2025-10-07 18:40:11,499 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:40:11,499 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:40:38,746 - INFO - Found 112 job containers
+2025-10-07 18:40:39,095 - INFO - Found 20 jobs on page 1
+2025-10-07 18:40:39,096 - INFO - Added 20 unique jobs from page 1
+2025-10-07 18:40:39,096 - INFO - Scraping job details 1/20: Global Energy Strategy & Business Operations Leader (m/f/*)
+2025-10-07 18:41:12,662 - INFO - Scraping job details 2/20: Industrial Adhesives & Tapes Specialist, Northern California
+2025-10-07 18:41:35,938 - INFO - Scraping job details 3/20: Spezialist Produktionssysteme / Fertigung (m/w/*)
+2025-10-07 18:42:14,614 - INFO - Scraping job details 4/20: Shift Supervisor (m/v/*)
+2025-10-07 18:42:37,186 - INFO - Scraping job details 5/20: Product Content Senior Analyst - Sumaré/SP
+2025-10-07 18:43:11,151 - INFO - Scraping job details 6/20: Strategy and Business Development Manager
+2025-10-07 18:43:33,442 - INFO - Scraping job details 7/20: Vertriebsmitarbeiter Außendienst (m/w/*) im Gebiet Mitte Deutschland
+2025-10-07 18:44:15,950 - INFO - Scraping job details 8/20: Business Development Manager – Militärmarkt (m/w/*)
+2025-10-07 18:44:47,471 - INFO - Scraping job details 9/20: Engineering Systems IT Architect
+2025-10-07 18:45:12,310 - INFO - Scraping job details 10/20: Automotive Application Engineer - Battery Bonding
+2025-10-07 18:45:40,862 - INFO - Scraping job details 11/20: Global Labor Relations Director
+2025-10-07 18:46:06,683 - INFO - Scraping job details 12/20: Environmental Engineer* (Cordova, IL)
+2025-10-07 18:47:07,913 - ERROR - Error fetching https://3m.wd1.myworkdayjobs.com/en-US/Search/job/US-Illinois-Cordova/Environmental-Engineer---Cordova--IL-_R01156825: 500 Server Error: Internal Server Error for url: https://api.scraperapi.com/?api_key=575191955b3c4a8515ff86bec89f57d2&url=https%3A%2F%2F3m.wd1.myworkdayjobs.com%2Fen-US%2FSearch%2Fjob%2FUS-Illinois-Cordova%2FEnvironmental-Engineer---Cordova--IL-_R01156825&render=true&country_code=us&wait=5000&session_number=1
+2025-10-07 18:47:07,927 - INFO - Scraping job details 13/20: Sr. Manager, Site Operations
+2025-10-07 18:47:41,641 - INFO - Scraping job details 14/20: Vertriebsmitarbeiter Außendienst (m/w/*) im Gebiet Hessen / Nord-Bayern
+2025-10-07 18:48:12,688 - INFO - Scraping job details 15/20: Process Development Engineer
+2025-10-07 18:48:43,995 - INFO - Scraping job details 16/20: Digital Marketing Content Specialist - Sumaré/SP (Região de Campinas)
+2025-10-07 18:49:05,816 - INFO - Scraping job details 17/20: Gerente de Cuentas Claves - Division Proteccion Personal
+2025-10-07 18:49:39,279 - INFO - Scraping job details 18/20: Product Development Specialist - Aerospace*
+2025-10-07 18:50:11,526 - INFO - Scraping job details 19/20: VAT and IEPS Certification Specialist, San Luis Potosí
+2025-10-07 18:50:30,416 - INFO - Scraping job details 20/20: Senior Key Account Manager, Consumer Business Group(General Trade/ Office Supplies)
+2025-10-07 18:50:51,188 - ERROR - Error getting next page URL: Pseudo-element found at position 28
+2025-10-07 18:50:51,189 - INFO - Completed scraping 3M Workday. Total jobs: 20
+2025-10-07 18:50:52,755 - INFO - Database initialized successfully
+2025-10-07 18:50:52,766 - INFO - Loaded config: 3M Workday
+2025-10-07 18:50:52,766 - INFO - Starting to scrape 3M Workday from https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:50:52,767 - INFO - Scraping page 1: https://3m.wd1.myworkdayjobs.com/en-US/Search
+2025-10-07 18:51:21,447 - INFO - Found 112 job containers
+2025-10-07 18:51:21,669 - INFO - Found 20 jobs on page 1
+2025-10-07 18:51:21,670 - INFO - Added 20 unique jobs from page 1
+2025-10-07 18:51:21,670 - INFO - Scraping job details 1/20: Global Energy Strategy & Business Operations Leader (m/f/*)
+2025-10-07 18:51:50,867 - INFO - Scraping job details 2/20: Industrial Adhesives & Tapes Specialist, Northern California
+2025-10-07 18:52:13,303 - INFO - Scraping job details 3/20: Spezialist Produktionssysteme / Fertigung (m/w/*)
+2025-10-07 18:52:37,564 - INFO - Scraping job details 4/20: Shift Supervisor (m/v/*)
+2025-10-07 18:52:56,897 - INFO - Scraping job details 5/20: Product Content Senior Analyst - Sumaré/SP
+2025-10-07 18:53:28,288 - INFO - Scraping job details 6/20: Strategy and Business Development Manager
+2025-10-07 18:53:52,232 - INFO - Scraping job details 7/20: Vertriebsmitarbeiter Außendienst (m/w/*) im Gebiet Mitte Deutschland
+2025-10-07 18:54:24,649 - INFO - Scraping job details 8/20: Business Development Manager – Militärmarkt (m/w/*)
+2025-10-07 18:54:47,312 - INFO - Scraping job details 9/20: Engineering Systems IT Architect
+2025-10-07 18:55:05,232 - INFO - Scraping job details 10/20: Automotive Application Engineer - Battery Bonding
+2025-10-07 18:55:37,399 - INFO - Scraping job details 11/20: Global Labor Relations Director
+2025-10-07 18:56:11,364 - INFO - Scraping job details 12/20: Environmental Engineer* (Cordova, IL)
+2025-10-07 18:56:28,075 - INFO - Scraping job details 13/20: Sr. Manager, Site Operations
+2025-10-07 18:56:50,686 - INFO - Scraping job details 14/20: Vertriebsmitarbeiter Außendienst (m/w/*) im Gebiet Hessen / Nord-Bayern
+2025-10-07 18:57:23,565 - INFO - Scraping job details 15/20: Process Development Engineer
+2025-10-07 18:57:47,792 - INFO - Scraping job details 16/20: Digital Marketing Content Specialist - Sumaré/SP (Região de Campinas)
+2025-10-07 18:58:10,964 - INFO - Scraping job details 17/20: Gerente de Cuentas Claves - Division Proteccion Personal
+2025-10-07 18:58:56,574 - INFO - Scraping job details 18/20: Product Development Specialist - Aerospace*
+2025-10-07 18:59:18,663 - INFO - Scraping job details 19/20: VAT and IEPS Certification Specialist, San Luis Potosí
+2025-10-07 18:59:42,625 - INFO - Scraping job details 20/20: Senior Key Account Manager, Consumer Business Group(General Trade/ Office Supplies)
+2025-10-07 19:00:30,204 - ERROR - Error getting next page URL: Pseudo-element found at position 28
+2025-10-07 19:00:30,205 - INFO - Completed scraping 3M Workday. Total jobs: 20
+2025-10-07 21:50:42,943 - INFO - Database initialized successfully

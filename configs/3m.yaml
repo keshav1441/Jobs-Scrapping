@@ -5,15 +5,15 @@ start_url: "https://3m.wd1.myworkdayjobs.com/en-US/Search"
 # Selectors to find the data on the page (updated for dynamic content)
 selectors:
   # Job listing page selectors (for dynamically loaded content)
-  job_container: "[data-automation-id='jobResults'] > div, .css-b3pn3b, .css-qiqmbt, .search-result, .result-item, .job-listing"
-  title: "[data-automation-id='jobTitle']::text, .css-19uc56f::text, .result-title::text, .listing-title::text"
-  company: "[data-automation-id='subtitle']::text, .result-company::text, .listing-company::text"
-  location: "[data-automation-id='locations']::text, .result-location::text, .listing-location::text"
-  date_posted: "[data-automation-id='postedOn']::text, .result-date::text, .listing-date::text"
-  apply_url: "[data-automation-id='jobTitle']::attr(href), .css-19uc56f::attr(href), .result-link::attr(href)"
-  description: "[data-automation-id='subtitle']::text, .result-description::text"
-  salary: "[data-automation-id='remoteType']::text, .result-salary::text"
-  job_type: "[data-automation-id='employmentType']::text, .result-type::text"
+  job_container: "[data-automation-id='jobResults'] > div, [data-automation-id='jobResults'] li, .css-b3pn3b, .css-qiqmbt, .search-result, .result-item, .job-listing, li[data-automation-id*='job'], div[data-automation-id*='job']"
+  title: "[data-automation-id='jobTitle']::text, [data-automation-id='jobTitle'] a::text, .css-19uc56f::text, .result-title::text, .listing-title::text, h3::text, h4::text"
+  company: "[data-automation-id='subtitle']::text, .result-company::text, .listing-company::text, .company::text"
+  location: "[data-automation-id='locations']::text, [data-automation-id='locations'] span::text, .result-location::text, .listing-location::text, .location::text"
+  date_posted: "[data-automation-id='postedOn']::text, [data-automation-id='postedOn'] span::text, .result-date::text, .listing-date::text, .date::text"
+  apply_url: "[data-automation-id='jobTitle']::attr(href), [data-automation-id='jobTitle'] a::attr(href), .css-19uc56f::attr(href), .result-link::attr(href), a[href*='job']::attr(href)"
+  description: "[data-automation-id='subtitle']::text, .result-description::text, .description::text"
+  salary: "[data-automation-id='remoteType']::text, .result-salary::text, .salary::text"
+  job_type: "[data-automation-id='employmentType']::text, .result-type::text, .job-type::text"
   
   # Job detail page selectors (for individual job pages)
   job_detail_selectors:
@@ -43,19 +43,19 @@ pagination:
 site_config:
   is_spa: true  # Single Page Application
   requires_js_rendering: true  # Needs JavaScript rendering
-  wait_time: 10  # Increased wait time for content to load
+  wait_time: 15  # Increased wait time for content to load
   user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
   use_selenium: true  # Use Selenium for JavaScript rendering
 
 # Scraping options
 scraping_options:
   use_scraperapi: true
-  delay_between_requests: 5
-  delay_between_job_details: 3
+  delay_between_requests: 0
+  delay_between_job_details: 0
   max_pages: 50
   scrape_job_details: true
   retry_failed_requests: true
-  max_retries: 3
+  max_retries: 2
 
 # Workday-specific settings
 workday_config:

@@ -63,12 +63,12 @@ class UniversalJobScraper:
     
     def __init__(self, config_dir: str = "configs/", scraperapi_key: str = None):
         # Load environment variables
-        load_dotenv('config.env')
+        load_dotenv('.env')
         
         self.config_dir = config_dir
         self.scraperapi_key = scraperapi_key or os.getenv('SCRAPERAPI_KEY')
         if not self.scraperapi_key:
-            raise ValueError("SCRAPERAPI_KEY not found in environment variables. Please set it in config.env file.")
+            raise ValueError("SCRAPERAPI_KEY not found in environment variables. Please set it in .env file.")
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -82,6 +82,29 @@ class UniversalJobScraper:
         # Initialize database
         self.init_database()
         
+    def _sanitize_job_fields(self, job_data: Dict) -> Dict:
+        """Map/clean fields to match JobData and drop unknown keys."""
+        try:
+            # Map date_posted -> posted_date
+            if 'date_posted' in job_data:
+                if not job_data.get('posted_date') and job_data['date_posted']:
+                    job_data['posted_date'] = job_data['date_posted']
+                # Remove original to avoid unexpected kwargs
+                job_data.pop('date_posted', None)
+
+            # Ensure url is present if apply_url exists
+            if job_data.get('apply_url') and not job_data.get('url'):
+                job_data['url'] = job_data['apply_url']
+
+            # Keep only fields defined in JobData
+            allowed_fields = set(JobData.__dataclass_fields__.keys())
+            cleaned = {k: v for k, v in job_data.items() if k in allowed_fields}
+            return cleaned
+        except Exception:
+            # Fallback: at least remove date_posted
+            job_data.pop('date_posted', None)
+            return job_data
+
     def init_database(self):
         """Initialize SQLite database for storing jobs"""
         self.db_path = "jobs_database.db"
@@ -195,6 +218,7 @@ class UniversalJobScraper:
     def scrape_job_listings(self, html_content: str, config: Dict) -> List[Dict]:
         """Scrape job listings from a search page"""
         jobs = []
+        seen_urls = set()  # Track URLs to prevent duplicates
         try:
             soup = BeautifulSoup(html_content, 'html.parser')
             selectors = config.get('selectors', {})
@@ -209,7 +233,11 @@ class UniversalJobScraper:
                 # Extract basic job data
                 for field, selector in selectors.items():
                     if field not in ['job_container', 'job_detail_selectors']:
-                        job_data[field] = self.extract_text_from_selector(soup, selector, container)
+                        # Map field names to match JobData class
+                        if field == 'date_posted':
+                            job_data['posted_date'] = self.extract_text_from_selector(soup, selector, container)
+                        else:
+                            job_data[field] = self.extract_text_from_selector(soup, selector, container)
                 
                 # Convert relative URLs to absolute URLs
                 if job_data.get('apply_url') and job_data['apply_url'].startswith('/'):
@@ -221,13 +249,22 @@ class UniversalJobScraper:
                     else:
                         job_data['apply_url'] = urljoin(base_url, job_data['apply_url'])
                 
-                # Add metadata
+                # Add metadata and map URL field
                 job_data['source_site'] = config.get('site_name', 'Unknown')
                 job_data['scraped_at'] = datetime.utcnow().isoformat()
                 
-                # Clean and validate job data
+                # Map apply_url to url for JobData class
+                if job_data.get('apply_url'):
+                    job_data['url'] = job_data['apply_url']
+                
+                # Clean and validate job data - prevent duplicates
                 if job_data.get('title') and job_data.get('apply_url'):
-                    jobs.append(job_data)
+                    # Use URL as unique identifier to prevent duplicates
+                    if job_data['apply_url'] not in seen_urls:
+                        seen_urls.add(job_data['apply_url'])
+                        jobs.append(job_data)
+                    else:
+                        logger.debug(f"Skipping duplicate job: {job_data['title']}")
                     
         except Exception as e:
             logger.error(f"Error scraping job listings: {e}")
@@ -330,6 +367,7 @@ class UniversalJobScraper:
     def save_job_to_database(self, job_data: Dict):
         """Save job data to database"""
         try:
+            job_data = self._sanitize_job_fields(dict(job_data))
             conn = sqlite3.connect(self.db_path)
             cursor = conn.cursor()
             
@@ -364,6 +402,7 @@ class UniversalJobScraper:
             return []
         
         all_jobs = []
+        seen_urls = set()  # Track URLs across all pages to prevent duplicates
         start_url = config.get('start_url', '')
         current_url = start_url
         pages_scraped = 0
@@ -382,28 +421,46 @@ class UniversalJobScraper:
             page_jobs = self.scrape_job_listings(html_content, config)
             logger.info(f"Found {len(page_jobs)} jobs on page {pages_scraped + 1}")
             
+            # Filter out duplicates across pages
+            unique_page_jobs = []
+            for job in page_jobs:
+                if job.get('apply_url') and job['apply_url'] not in seen_urls:
+                    seen_urls.add(job['apply_url'])
+                    unique_page_jobs.append(job)
+                else:
+                    logger.debug(f"Skipping duplicate job across pages: {job.get('title', 'Unknown')}")
+            
+            logger.info(f"Added {len(unique_page_jobs)} unique jobs from page {pages_scraped + 1}")
+            
             # Scrape detailed information for each job
             if scrape_job_details:
-                for i, job in enumerate(page_jobs):
+                for i, job in enumerate(unique_page_jobs):
                     if job.get('apply_url'):
-                        logger.info(f"Scraping job details {i+1}/{len(page_jobs)}: {job.get('title', 'Unknown')}")
+                        logger.info(f"Scraping job details {i+1}/{len(unique_page_jobs)}: {job.get('title', 'Unknown')}")
                         job_details = self.scrape_job_details(job['apply_url'], config)
                         job.update(job_details)
                         
                         # Save to database
                         self.save_job_to_database(job)
                         
-                        # Add delay between job detail requests
-                        time.sleep(2)
+                        # Optional delay between job detail requests (now defaults to 0)
+                        jd_delay = config.get('scraping_options', {}).get('delay_between_job_details', 0) or 0
+                        if jd_delay > 0:
+                            time.sleep(jd_delay)
             
-            all_jobs.extend(page_jobs)
+            # Sanitize before returning/collecting to avoid stray keys in output
+            for j in unique_page_jobs:
+                sanitized = self._sanitize_job_fields(j)
+                all_jobs.append(sanitized)
             
             # Get next page URL
             current_url = self.get_next_page_url(html_content, config, current_url)
             pages_scraped += 1
             
-            # Add delay between pages
-            time.sleep(3)
+            # Optional delay between pages (now defaults to 0)
+            page_delay = config.get('scraping_options', {}).get('delay_between_requests', 0) or 0
+            if page_delay > 0:
+                time.sleep(page_delay)
         
         logger.info(f"Completed scraping {config.get('site_name', 'Unknown')}. Total jobs: {len(all_jobs)}")
         return all_jobs

@@ -15,11 +15,11 @@ def main():
     # Initialize scraper
     scraper = UniversalJobScraper()
     
-    # Scrape 3M jobs
-    print("Starting to scrape 3M jobs...")
+    # Scrape 3M jobs (use proven working approach: 1 page, with details)
+    print("Starting to scrape 3M jobs (test-fixed approach)...")
     start_time = time.time()
     
-    jobs = scraper.scrape_site('3m.yaml', max_pages=5, scrape_job_details=False)
+    jobs = scraper.scrape_site('3m.yaml', max_pages=1, scrape_job_details=True)
     
     end_time = time.time()
     duration = end_time - start_time
