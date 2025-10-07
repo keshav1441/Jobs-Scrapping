@@ -18,6 +18,7 @@ import re
 from dataclasses import dataclass, asdict
 import sqlite3
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Configure logging
 logging.basicConfig(
@@ -61,8 +62,13 @@ class UniversalJobScraper:
     """Universal job scraper that works with YAML configurations"""
     
     def __init__(self, config_dir: str = "configs/", scraperapi_key: str = None):
+        # Load environment variables
+        load_dotenv('config.env')
+        
         self.config_dir = config_dir
-        self.scraperapi_key = scraperapi_key or 'a6d4e94d7a28b565f7c83839f54926a5'
+        self.scraperapi_key = scraperapi_key or os.getenv('SCRAPERAPI_KEY')
+        if not self.scraperapi_key:
+            raise ValueError("SCRAPERAPI_KEY not found in environment variables. Please set it in config.env file.")
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',

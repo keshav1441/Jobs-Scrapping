@@ -233,3 +233,6 @@ data
 2025-10-07 16:37:52,873 - INFO - Scraping job details 4/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
 2025-10-07 16:38:13,436 - ERROR - Error saving job to database: JobData.__init__() got an unexpected keyword argument 'date_posted'
 2025-10-07 16:38:15,437 - INFO - Scraping job details 5/60: Spezialist Produktionssysteme / Fertigung (m/w/*)
+2025-10-07 16:55:09,514 - INFO - Database initialized successfully
+2025-10-07 16:56:10,371 - INFO - Database initialized successfully
+2025-10-07 16:56:15,769 - INFO - Database initialized successfully
