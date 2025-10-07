@@ -1,0 +1,91 @@
+# Configuration for 3M Workday Jobs Portal
+site_name: "3M Workday"
+start_url: "https://3m.wd1.myworkdayjobs.com/en-US/Search"
+
+# Selectors to find the data on the page (updated for dynamic content)
+selectors:
+  # Job listing page selectors (for dynamically loaded content)
+  job_container: "[data-automation-id='jobResults'] > div, .css-b3pn3b, .css-qiqmbt, .search-result, .result-item, .job-listing"
+  title: "[data-automation-id='jobTitle']::text, .css-19uc56f::text, .result-title::text, .listing-title::text"
+  company: "[data-automation-id='subtitle']::text, .result-company::text, .listing-company::text"
+  location: "[data-automation-id='locations']::text, .result-location::text, .listing-location::text"
+  date_posted: "[data-automation-id='postedOn']::text, .result-date::text, .listing-date::text"
+  apply_url: "[data-automation-id='jobTitle']::attr(href), .css-19uc56f::attr(href), .result-link::attr(href)"
+  description: "[data-automation-id='subtitle']::text, .result-description::text"
+  salary: "[data-automation-id='remoteType']::text, .result-salary::text"
+  job_type: "[data-automation-id='employmentType']::text, .result-type::text"
+  
+  # Job detail page selectors (for individual job pages)
+  job_detail_selectors:
+    full_description: "[data-automation-id*='description']::text, .job-description::text, .description::text, .content::text, .job-summary::text, .summary::text"
+    requirements: "[data-automation-id*='requirement']::text, .requirements::text, .qualifications::text, .skills::text, .required-skills::text"
+    benefits: "[data-automation-id*='benefit']::text, .benefits::text, .perks::text, .compensation::text, .total-rewards::text"
+    department: "[data-automation-id*='department']::text, .department::text, .division::text, .business-group::text"
+    experience_level: "[data-automation-id*='experience']::text, .experience::text, .level::text, .seniority::text"
+    work_arrangement: "[data-automation-id*='remote']::text, .remote::text, .work-location::text, .work-arrangement::text, .location-type::text"
+    travel_required: "[data-automation-id*='travel']::text, .travel::text, .travel-required::text, .travel-percentage::text"
+    eligibility: "[data-automation-id*='eligibility']::text, .eligibility::text, .qualifications::text, .basic-qualifications::text"
+    clearance: "[data-automation-id*='clearance']::text, .clearance::text, .security-clearance::text, .background-check::text"
+    physical_requirements: "[data-automation-id*='physical']::text, .physical::text, .physical-requirements::text, .work-environment::text"
+    equal_opportunity: "[data-automation-id*='equal']::text, .equal-opportunity::text, .eeo::text, .diversity::text"
+    closing_date: "[data-automation-id*='closing']::text, .closing-date::text, .deadline::text, .application-deadline::text"
+    salary: "[data-automation-id*='salary']::text, .salary::text, .compensation::text, .pay::text, .wage::text"
+    job_type: "[data-automation-id*='employment']::text, .employment-type::text, .job-type::text, .work-schedule::text"
+
+# Pagination configuration
+pagination:
+  next_page_selector: "[data-automation-id*='next']::attr(href), .next-page::attr(href), button[aria-label*='Next']::attr(data-offset)"
+  use_javascript: true  # Workday uses JavaScript for pagination
+  max_pages: 50
+  page_parameter: "page"  # URL parameter for page number
+
+# Site-specific configuration
+site_config:
+  is_spa: true  # Single Page Application
+  requires_js_rendering: true  # Needs JavaScript rendering
+  wait_time: 10  # Increased wait time for content to load
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  use_selenium: true  # Use Selenium for JavaScript rendering
+
+# Scraping options
+scraping_options:
+  use_scraperapi: true
+  delay_between_requests: 5
+  delay_between_job_details: 3
+  max_pages: 50
+  scrape_job_details: true
+  retry_failed_requests: true
+  max_retries: 3
+
+# Workday-specific settings
+workday_config:
+  tenant: "3m"
+  site_id: "Search"
+  locale: "en-US"
+  api_endpoints:
+    search: "https://3m.wd1.myworkdayjobs.com/wday/cxs/3m/Search/jobs"
+    job_detail: "https://3m.wd1.myworkdayjobs.com/wday/cxs/3m/Search/job"
+  
+# Alternative selectors for different page layouts
+alternative_selectors:
+  # If the main selectors don't work, try these
+  job_container_alt: ".search-result, .result-item, .job-listing, .position-listing"
+  title_alt: ".result-title::text, .listing-title::text, a[href*='job']::text"
+  company_alt: ".result-company::text, .listing-company::text"
+  location_alt: ".result-location::text, .listing-location::text"
+  apply_url_alt: "a[href*='job']::attr(href), .result-link::attr(href)"
+
+# Data cleaning rules
+data_cleaning:
+  remove_extra_whitespace: true
+  clean_html_tags: true
+  normalize_text: true
+  extract_salary_numbers: true
+  standardize_date_format: true
+
+# Output configuration
+output:
+  save_to_database: false
+  export_formats: ["json"]
+  include_raw_html: false
+  include_metadata: true

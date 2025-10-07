@@ -1,0 +1,54 @@
+# Configuration for Carlisle Companies Job Portal
+site_name: "Carlisle Companies"
+start_url: "https://myjobs.adp.com/carlislecompanies/cx/job-listing"
+
+# Selectors for Carlisle Companies job listings
+selectors:
+  job_container: ".job-listing, .job-item, .position-item, .result-item, .listing"
+  title: ".job-title::text, .position-title::text, h3::text, h4::text, .title::text"
+  company: ".company-name::text, .employer::text, .organization::text, .company::text"
+  location: ".job-location::text, .location::text, .place::text, .city::text"
+  date_posted: ".job-date::text, .posted-date::text, .date::text, .created::text"
+  apply_url: ".apply-link::attr(href), .job-link::attr(href), a::attr(href)"
+  description: ".job-description::text, .summary::text, .details::text, .description::text"
+  salary: ".salary::text, .compensation::text, .pay::text, .wage::text"
+  job_type: ".job-type::text, .employment-type::text, .category::text, .type::text"
+
+# Pagination configuration
+pagination:
+  next_page_selector: ".next-page::attr(href), .pagination .next::attr(href), a[rel='next']::attr(href), .load-more::attr(href)"
+  use_javascript: false
+  max_pages: 5
+  page_parameter: "page"
+
+# Site-specific configuration
+site_config:
+  is_spa: true
+  requires_js_rendering: true
+  wait_time: 15
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+# Scraping options
+scraping_options:
+  use_scraperapi: true
+  delay_between_requests: 3
+  delay_between_job_details: 2
+  max_pages: 1
+  scrape_job_details: false
+  retry_failed_requests: true
+  max_retries: 2
+
+# Data cleaning rules
+data_cleaning:
+  remove_extra_whitespace: true
+  clean_html_tags: true
+  normalize_text: true
+  extract_salary_numbers: true
+  standardize_date_format: true
+
+# Output configuration
+output:
+  save_to_database: false
+  export_formats: ["json"]
+  include_raw_html: false
+  include_metadata: true
